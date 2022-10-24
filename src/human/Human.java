@@ -4,13 +4,13 @@ import java.time.LocalDate;
 
 public class Human {
     public String name;
-    public  String yearOfBirth;
+    public  int yearOfBirth;
     public String  town;
     public String job;
 
 
 
-    public Human(String name,String yearOfBirth,String town,String job) {
+    public Human(String name, int yearOfBirth,String town,String job) {
 if(yearOfBirth<0) {
     this.yearOfBirth = 0;
 }else{
@@ -32,6 +32,17 @@ if(name==null){
             this.job =job;
         }
         this. yearOfBirth =  yearOfBirth;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", yearOfBirth=" + yearOfBirth +
+                ", town='" + town + '\'' +
+                ", job='" + job + '\'' +
+                '}';
     }
 
     void story(){

@@ -1,14 +1,28 @@
 package car;
 
+import java.time.LocalDate;
+
 public class Car {
     String brand;
     String model;
-    String engineVolume;
+   double engineVolume;
     String color;
-    String productionYear;
+     LocalDate productionYear;
     String productionCountry;
 
-    public Car(String brand,  String model, String engineVolume, String color, int productionYear, String productionCountry) {
+    @Override
+    public String toString() {
+        return "Car{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", engineVolume=" + engineVolume +
+                ", color='" + color + '\'' +
+                ", productionYear=" + productionYear +
+                ", productionCountry='" + productionCountry + '\'' +
+                '}';
+    }
+
+    public Car(String brand, String model, double engineVolume, String color,  LocalDate productionYear, String productionCountry) {
        if(brand==null){
            this.brand="default ";
        }else{
@@ -25,7 +39,7 @@ public class Car {
             this.productionCountry = productionCountry;
         }
         if(Double.compare(engineVolume, 0)==0) {
-            this.engineVolume = "1,5";
+            this.engineVolume = 1.5;
         }else{
             this.engineVolume = engineVolume;
         }
@@ -35,16 +49,13 @@ public class Car {
         }else{
             this.color = color;
         }
-
-        if(productionYear==0) {
-            this.productionYear = "2000";
+        if(productionYear==null) {
+            //this.productionYear = 2000;
         }else{
             this.productionYear = productionYear;
 
-
-
     }
-    public void  specifications(){
+    //public void  specifications(){
        System.out.println(brand + " " + model + ", " + productionYear + " год выпуска, " + "сборка  " + productionCountry + ", " + color + " цвета, " + "объем двигателя");
 
 
