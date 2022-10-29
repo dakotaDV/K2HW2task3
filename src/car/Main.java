@@ -5,7 +5,7 @@ public class Main {
 
         Car lada = new Car("Lada", "Granta", 1.7,"желтый",2015,  "в России");
        // lada.specifications();
-        Car audi = new Car("Audi", "A8 50 L TDI quattro", 3.0, "черный ", "2020", "в Германии");
+        Car audi = new Car("Audi", "A8 50 L TDI quattro", 3.0, "черный ", 2020, "в Германии");
        // audi.specifications();
         Car bmw = new Car("BMW", "Z8", 3.0, "черный", 2021, "в Германии");
        // bmw.specifications();

@@ -7,7 +7,7 @@ public class Car {
     String model;
    double engineVolume;
     String color;
-     LocalDate productionYear;
+     int productionYear;
     String productionCountry;
 
     @Override
@@ -22,7 +22,7 @@ public class Car {
                 '}';
     }
 
-    public Car(String brand, String model, double engineVolume, String color,  LocalDate productionYear, String productionCountry) {
+    public Car(String brand, String model, double engineVolume, String color,  int productionYear, String productionCountry) {
        if(brand==null){
            this.brand="default ";
        }else{
@@ -49,8 +49,8 @@ public class Car {
         }else{
             this.color = color;
         }
-        if(productionYear==null) {
-            //this.productionYear = 2000;
+        if(productionYear >=0) {
+            this.productionYear = 2000;
         }else{
             this.productionYear = productionYear;
 
